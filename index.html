@@ -213,6 +213,11 @@
    var paragraph = document.getElementById("randomNumber");
 
    //function to generate and display a random number
+   function generateRandomNumber () {
+     var randomNumber = Math.floor(Math.random() * 10) + 1;
+   }
+   //add a clcik event listener to the button
+   button.addEvenetListener("Click", generateRandomNumber);
   </script>
  </body>
 </html>
