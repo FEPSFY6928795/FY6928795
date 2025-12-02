@@ -9,7 +9,21 @@
     <hr>
     <h2 style= "font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
     <hr>
-   
+   <body>
+    
+<!clock>
+<div id="clock"></div>
+
+<script>
+function updateClock() {
+  document.getElementById("clock").innerHTML =
+    new Date().toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
     <!style for tables>
       <style>
         table {
@@ -272,20 +286,6 @@
  }
 </script>
 
-<body>
-
-<div id="clock"></div>
-
-<script>
-function updateClock() {
-  document.getElementById("clock").innerHTML =
-    new Date().toLocaleTimeString();
-}
-setInterval(updateClock, 1000);
-updateClock();
-</script>
-
-</body>
 </html>
 
 
