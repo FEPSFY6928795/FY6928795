@@ -124,7 +124,7 @@ updateClock();
      continuous glucose measurements, aloowing clinicians to identify patterns such as overnight hypoglycaemia and post-meal spikes, enabling precise
      adjustments to the treatment. When integrated with insulin pumps, these devices form a closed loop system: glucose readings determine the insulin 
      dose and the resulting glucose response guides future treatment. Clinical studies demonstrate that CGM use improves glycaemic control compared 
-     with traditional self-monitoring, with real time CGMs providing the greatest benefits (weisman et al., 2017).
+     with traditional self-monitoring, with real time CGMs providing the greatest benefits. (weisman et al., 2017).
 
      Successful use of CGMs and pumps requires organised data, as well as patient education. Clinicians must be able to identify trends without being 
      overwhelmed by raw data, while patients and caregivers require guidance on how to interprate readings (Dovc et al., 2023). These technologies can 
@@ -176,146 +176,32 @@ updateClock();
   <h3 id="References">References</h3>
   <p class="ex1">
     <pre>
-      Anguin, D (1988), Queries and concept learning. Machine learning 2, (4), 319-342.
+     Zhang, X., Li, Y., Wang, J., et al., 2023a Hydrogel-Based Bioelectrics and Their Applications in Health Monitoring.
+     Available at: https://www.mdpi.com/2079-6374/13/7/696 Accessed: 05/12/25
 
-      Brinker, K (2003), Incoperating Diversity in Active Learning with Support Vector Machines,
-      Proceedings of the Twentieth International Conference on Mechine Learning (ICML-2003).
+     Zhang, X., Li, Y., Wang, J., et al., 2023b. Elastic and Deformable Hydrogels for Wearable Bioelectronics. 
+     Available at: https://www.mdpi.com/2079-6374/13/8/815 Accessed: 05/12/25
 
-      Bruzzone, L Chi, M and Marconcii, M (2006), A novel transductive SVM for semisupervised classication of remote-sensing images,
-      IEEE Transactions on Geoscience and Remote Sencing, 44, (11), 3363.
+     Weisman, A. et al., 2017. Effect of artificial pancreas systems on glycaemic control in patients with type 1 diabetes: 
+     a systematic review and meta-analysis of outpatient randomised controlled trials
+     Available at: https://www.thelancet.com/journals/landia/article/PIIS2213-8587(17)30167-5/abstract?2023/7/19/?2023/7/19/=
+     Accessed: 05/12/25
 
-      Campbell, C, Cristiani, N and Smola, A (2000), Query learning with large margin classifiers.
-      In: Proc. 17th Internat. Conf.on Machine Learning. Morgan Kaufman, Stanford, CA,111-118.
+     Dovc, K. et al., 2023. Continuous and Intermittent Glucose Monitoring in 2023
+     Available at: https://www.liebertpub.com/doi/full/10.1089/dia.2024.2502#tab-citations Accessed: 05/12/25
+
+     Boudi, A.L., Boudi, M., Chan, C., Boudi, F., 2024 Ethical Challenges of Artificial Intelligence in Medicine
+     Avaiable at: https://assets.cureus.com/uploads/review_article/pdf/316917/20241226-879443-7gbuve.pdf Accessed: 05/12/25
     </pre>
   </p>
-   
-</head>
+
+  </body>
+  </head>
+
+
  
- <!DOCTYPE html>
-<html>
-<head>
- <title>Change Button Colour</title>
-</head>
-<body>
- <button id="colorButton">Click me to change colour</button>
- <script>
-  // Get a reference to the button element
-  var button = document.getElementById("colorButton");
-
-  // Function to change the button color
-  function changeColor() {
-   // Generate a random color (hexadecimal)
-   var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-
-   // Set the button's background color to the random color
-   button.style.backgroundColor = randomColor;
- }
-
-  // Add a click event listener to the button
-  button.addEventListener("click", changeColor);
- </script>
-</body>
-</html>
-
- <!DOCTYPE html>
-<html>
-<head>
- <title>Alert Input Text</title>title>
-</head>
- <body>
-    <input type="text" id="textInput" placeholder="Enter text">
-    <button id="alertButton">Show Alert</button>
-
-  <script>
-    // Get references to the input field and button
-    var input = document.getElementById("TextInput");
-    var button = document.getElementById("alertButton");
-
-    // Function to show an alert with the input text
-    function showAlert() {
-       var inputText = input.Value;
-       alert("You entered: " + inputText);
-    }
-
-   //add a click event listener to the button
-   button.addEventListener("Click", showAlert);
-   </script>
- </body>
-</html>
-
-<!DOCTYPE html>
-<html>
- <head>
-  <title>Random Number Generator</title>
- </head>
- <body>
-  <button id="generateButton">Generate Random Number</button>
-  <p id="randomNumber"></p>
-
-  <script>
-   //get a reference to the button and paragraph
-   var button = document.getElementById("generateButton");
-   var paragraph = document.getElementById("randomNumber");
-
-   //function to generate and display a random number
-   function generateRandomNumber () {
-     var randomNumber = Math.floor(Math.random() * 10) + 1;
-   }
-   //add a clcik event listener to the button
-   button.addEvenetListener("Click", generateRandomNumber);
-  </script>
- </body>
-</html>
 
 
-<head>
- <title>My Daily Activities</title>
- <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js></script>
-</head>
-
- <div id="chart_div"></div>
-
- <script type="text/javascript">
-   google.charts.load('current',{'packages':[@corechart']})
-   google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = googgle.visulization.arrayToDataTable([
-       ['Task',Hours per Day'],
-       ['Work',8]
-       ['Sleep',8]
-       ['Eat',2]
-       ['Study',4]
-       ['Exercise',2]
-     ]);
-
-     var options = {
-             title: 'My Daily Activities'
-     };
-
-     var chart = new google.visulisation.PieChart(Document.getElementByld('chart_div']);
-     chart.draw(data,options);
-    }
- </script>
-
- data.addColumn('number',Age');
- data.addColumn('number,'Salary');
-
- data.addRows([
-   [25,40000],
-   [30,50000],
-   [35,60000],
-   [40,75000],
-   [45,80000],
-   [50,90000],
- ]);
- var options = {
-  title: 'Age vs. Salary',
-  hAxis: {title:'Age'}
- };
- var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
- chart.draw(data, options);
- }
-</script>
 
 </html>
 
