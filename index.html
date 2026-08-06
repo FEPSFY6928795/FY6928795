@@ -73,8 +73,9 @@
   // Function to calculate and display word count for a specified section
   function displayWordCount(sectionId, outputId) {
     // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
+    const element = document.getElementById(sectionId);
+console.log("Looking for:", sectionId, element);
+const text = element.textContent;
     const wordArray = text.trim().split(/\s+/);
     // Count the words
     const wordCount = wordArray.length;
@@ -89,7 +90,7 @@ const IntroductionCount = displayWordCount("Introduction_InText");
 
 console.log(document.getElementById("Introduction_InText"));
 console.log(document.getElementById("Analysis_InText"));
-const AnalysisHeading = displayWordCount("Analysis");
+const AnalysisHeading = displayWordCount("Analysis and discussion");
 const AnalysisCount = displayWordCount("Analysis_InText");
 
 const totalWordCount =
@@ -104,7 +105,7 @@ const totalWordCount =
   window.addEventListener("load", displayTotalWordCount);
 </script>
 
-</script>
+
 
 
     <!style for tables>
