@@ -84,15 +84,22 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const IntroductionHeading = displayWordCount("Introduction");
+const IntroductionCount = displayWordCount("Introduction_InText");
+
+const AnalysisHeading = displayWordCount("Analysis");
+const AnalysisCount = displayWordCount("Analysis_InText");
+
+const totalWordCount =
+    IntroductionHeading +
+    IntroductionCount +
+    AnalysisHeading +
+    AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
   // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
+  window.addEventListener("load", displayTotalWordCount);
 </script>
 
 </script>
@@ -181,7 +188,7 @@
 
   <h3 id="Introduction">Introduction</h3>
   <p class="ex1">
-    <pre style="font-family:'Times New Roman', Times, serif;">
+    <pre id="Introduction_InText" style="font-family:'Times New Roman', Times, serif;">
     The integration of wearable medical technology is rapidly changing how chronic diseases are monitored and managed. One of the most
     prevalent uses of these devices is in diabetes management, where continuous monitoring and automated delivery systems support treatment, but
     the same approach applies across many other long term conditions. As these devices become more established in clinical practice, their design
@@ -192,7 +199,7 @@
 
   <h3 id="Analysis and discussion">Discussion and Analysis</h3>
   <p>
-    <pre style="font-family:'Times New Roman', Times, serif;">
+    <pre id="Analysis_InText" style="font-family:'Times New Roman', Times, serif;">
      Wearable medical devices must achieve a balance between functionality and patient comfort. Devices intended for continuous daily use must
      remain lightweight and unobtrusive, while being capable of housing essential components. Accurate data collection is particularly important
      during physical activity, as exposure to sweat, dirt and temperature fluctuations may interfere with performance, this makes material selection
@@ -266,7 +273,7 @@
 
   <h3 id="References">References</h3>
   <p class="ex1">
-    <pre style="font-family:'Times New Roman', Times, serif;">
+    <pre id="References" style="font-family:'Times New Roman', Times, serif;">
      Zhang, X., Li, Y., Wang, J., et al., 2023a Hydrogel-Based Bioelectrics and Their Applications in Health Monitoring.
      Available at: https://www.mdpi.com/2079-6374/13/7/696 Accessed: 05/12/25
 
